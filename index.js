@@ -46,7 +46,7 @@ Here's what a link looks like, check [me](https://github.com/brajpatel) out.
 \`I'm a single line of <code></code> between two backticks!\`
 
 \`\`\`
-// This is what a mulit-line code block looks like
+// This is what a multi-line code block looks like
 
 function myExample() {
     return null;
