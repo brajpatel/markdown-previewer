@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header: white;
+    --text: black;
+    --background: #d7eaf3;
+    --code: #1f4996;
+    --code-text: white;
+    --primary-font: 'Titillium Web', sans-serif;
+    --secondary-font: 'Barlow', sans-serif;
+    --border-radius: 3px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.623);
+}
+
+body {
+    background: #77b5d9;
+}
+
+h1 {
+    text-align: center;
+    width: 35%;
+    margin: 1rem auto;
+    padding-bottom: 0.6rem;
+    border-bottom: 3px solid white;
+    color: var(--header);
+    font-family: var(--primary-font);
+    letter-spacing: 0.1ch;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--header);
+    font-family: var(--secondary-font);
+}
+
+i {
+    margin-left: 1rem;
+}
+
+#editor {
+    height: 45vh;
+    width: 45vw;
+    min-height: 25vh;
+    padding: 1rem;
+    outline: none;
+    background: rgb(241, 241, 241);
+    font-family: var(--secondary-font);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+#editor:focus {
+    background: var(--background);
+}
+
+#editor::placeholder {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+#preview {
+    padding: 1rem;
+    background: var(--background);
+    min-height: 60vh;
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 3rem;
+    color: var(--text);
+    text-align: left;
+    font-family: var(--secondary-font);
+    border-radius: var(--border-radius);
+    overflow-wrap: break-word;
+    box-shadow: var(--box-shadow);
+}
+
+#preview blockquote {
+    border-left: 3px solid var(--code);
+    color: var(--text);
+    padding-left: 5px;
+    margin-left: 25px;
+}
+
+#preview code {
+    background: var(--code);
+    font-size: 0.875rem;
+    padding: 5px 20px;
+    font-weight: bold;
+    color: var(--code-text);
+    border-radius: var(--border-radius);
+    line-height: 1.4rem;
+}
+
+#preview pre {
+    display: block;
+    overflow: auto;
+    background: var(--code);
+    padding: 5px;
+    line-height: 1.2;
+    color: var(--code-text);
+    padding-left: 1rem;
+    border-radius: var(--border-radius);
+}
+
+#preview h1 {
+    border-bottom: 2px solid var(--text);
+    text-align: left;
+    width: 100%;
+    padding-bottom: 0.3rem;
+    color: var(--text);
+}
+
+#preview h2 {
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 0.3rem;
+    color: var(--text);
+}
+
+#preview table {
+    border-collapse: collapse;
+}
+
+#preview td,
+#preview th {
+    border: 2px solid var(--text);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#preview img {
+    display: block;
+    max-width: 70%;
+    margin: 2rem auto;
+}
+
+footer {
+    text-align: center;
+}
+
+footer #created {
+    font-family: var(--secondary-font);
+}
+
+#created a {
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+#created a:hover {
+    color: #003d59;
+}
+
+#created a::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+}
+
+#created a::before {
+    height: 2px;
+    bottom: 0;
+    background: #003d59;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.4s ease-in-out;
+}
+
+#created a:hover::before {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+}
+
+#created i {
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+}
